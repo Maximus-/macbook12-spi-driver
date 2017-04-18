@@ -6,15 +6,15 @@ To get this driver to work on a 2016 12" MacBook, you'll need to boot the kernel
 
 This should result in the intel-lpss driver attaching itself to the SPI controller, and exposing the `APP000D` device.
 
-The 2015 MacBook seems much more complicated, as the DMA controller isn't built in to the SPI controller. Unfortunately, I don't have a 2015 model to test.
+For this to work with the 2015 model, simply make sure that none of the intel-lpss kernel modules are installed. 
 
 What works:
 -----------
 * Basic Typing
 * FN keys
 * Driver unloading (no more hanging)
-* Basic touchpad functionality (even right click, handled by libinput)
-* MT touchpad functionality (two finger scroll, probably others)
+* Basic touchpad functionality (even right click, handled by libinput) (except for the 2015 12" Macbook)
+* MT touchpad functionality (two finger scroll, probably others) (except for the 2015 12" Macbook)
 * Interrupts!
 * Suspend / resume
 
